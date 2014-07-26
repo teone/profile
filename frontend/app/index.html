@@ -25,14 +25,14 @@
 
     <!-- Add your site or application content here -->
     <div class="wrapper">
-        <header>
+        <header ng-controller="HeaderCtrl">
             <aside>
                 Logo
-                <button>
+                <button ng-click="showNav = !showNav">
                     <i class="fa fa-bars"></i>
                 </button>
             </aside>
-            <nav>
+            <nav ng-class="{active: showNav == true}">
                 <ul>
                     <li>
                         <a href="#/">My Profile</a>
@@ -91,6 +91,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,6 +1,7 @@
 /* ===================================== VARS ======================================*/
 $tablet: 1023px;
 $mobile: 769px;
+$default-spacing: 10px;
 
 /* ===================================== IMPORT ======================================*/
 @import 'bourbon/bourbon';
@@ -19,7 +20,10 @@ html, body {
         min-height: 100%;
     }
     header{
+        padding-top: $default-spacing;
+        padding-bottom: $default-spacing;
         button{
+            float: right;
             @include media(min-width $mobile){
                 display: none;
             }
@@ -36,8 +40,8 @@ html, body {
         }
     }
     footer {
-        height: 80px;
-        margin-top: -80px;
+        height: 60px;
+        margin-top: -60px;
 
         @include media(max-width $mobile){
                 text-align: center;
