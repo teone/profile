@@ -16,6 +16,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body ng-app="profileFeApp">
     <!--[if lt IE 7]>
@@ -23,7 +24,38 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="wrapper">
+      <header>
+        <aside>Logo</aside>
+        <nav>
+          <ul>
+            <li>
+              <a href="#/">My Profile</a>
+            </li>
+            <li>
+              <a href="#/about">About This</a>
+            </li>
+            <li>
+              <a href="#/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container" ng-view=""></div>
+    </div>
+    <footer>
+      <article>
+        © Matteo Scandolo
+      </article>
+      <aside>
+        <a href="https://github.com/teone" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="http://stackoverflow.com/users/1889864/teo-ne" target="_blank">
+          <i class="fa fa-stack-overflow"></i>
+        </a>
+      </aside>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -43,6 +75,11 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

@@ -1,19 +1,19 @@
 'use strict'
 
-// TODO start creating the Frontend App
+# TODO start creating the Frontend App
 
 angular
-  .module('profileFeApp', [
+.module('profileFeApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngRoute'
-  ])
-  .config ($routeProvider) ->
+])
+.config ($routeProvider) ->
     $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .otherwise
-        redirectTo: '/'
-
+        .when '/',
+            templateUrl: 'views/main.html'
+            controller: 'MainCtrl'
+        .otherwise
+            #redirectTo: '/'
+            templateUrl: '404.html'
