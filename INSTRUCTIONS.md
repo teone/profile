@@ -36,7 +36,7 @@ The public application is an AngularJS application, but I've decided that has co
 
 The application structure is scaffholded using (Yeoman)[http://yeoman.io/] and the (generator-angular)[https://github.com/yeoman/generator-angular].
 
---As I would like to try out new stuff in this project I would also give a try to a semantic css framework, (Semantic-UI)[http://semantic-ui.com/]--
+~~As I would like to try out new stuff in this project I would also give a try to a semantic css framework, (Semantic-UI)[http://semantic-ui.com/]~~
 
 After reading some more about Semantic-UI, I prefer to swith to a pure Scss framework, so I decided to give a try to Bourbon [http://bourbon.io/], used toghete with Neat and Bitter. I choose not to use Refills as it require jQuery and I would like to avoid using it in this project.
 
@@ -57,3 +57,4 @@ To speed-up my development flow I discovered today about git hooks, so I writed 
 
 
 #TODO
+
