@@ -52,7 +52,30 @@ Since when I discover them I can't live without anymore. I'm goig to use (bower)
 
 Of course I'm going to use git as versioning tool, approching this project with the "Feature Branch Workflow" as described in (this interesting article)[https://www.atlassian.com/git/workflows#!workflow-gitflow] from Atlassian.
 
-To speed-up my development flow I discovered today about git hooks, so I writed one that runs before commit that basically call a (grunt task)[https://www.npmjs.org/package/grunt-todo] that basically cicle trough you file looking for //TODO comment and create a TODO.md file, then add it to the commit, so I can easily track any next task. I'll be more precise on this later.
+To speed-up my development flow I discovered today about git hooks, so I writed one that runs before commit that basically call a (grunt task)[https://www.npmjs.org/package/grunt-todo] that basically cicle trough you file looking for //TODO comment and create a TODO.md file, then add it to the commit, so I can easily track any next task. ~~I'll be more precise on this later.~~
+
+###How to auto-update TODO.md file on commit
+
+Create a ```.git/hooks/pre-commit``` file.
+
+Paste this content in:
+```
+#running todo task
+echo "Running Grunt Todo"
+grunt todo
+
+#creating readme file
+echo "Creating Readme File"
+cat /dev/null > README.md
+cat INSTRUCTIONS.md > README.md
+cat TODO.md >> README.md
+
+#Adding files to commit
+echo "Adding file to commit"
+git add TODO.md README.md
+```
+and then just commit!
+
 
 
 
