@@ -17,5 +17,9 @@ html, body {
     footer {
         height: 80px;
         margin-top: -80px;
+
+        @include media(max-width 767px){
+                text-align: center;
+            }
     }
 }

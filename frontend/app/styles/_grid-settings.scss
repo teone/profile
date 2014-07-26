@@ -1,3 +1,14 @@
+/* ===================================== VARS ======================================*/
+$tablet: 1023px;
+$mobile: 767px;
+
+/* ===================================== COMMON ======================================*/
+header, footer, div.container{
+	@include media(max-width $mobile){
+    	padding: 0 10px;
+    }
+}
+
 /* ===================================== HEADER ======================================*/
 header {
     @include outer-container;
@@ -6,6 +17,12 @@ header {
     }
     nav{
     	@include span-columns(9);
+    }
+
+    aside, nav {
+    	@include media(max-width $mobile){
+    		@include span-columns(12);
+    	}
     }
 }
 
@@ -16,7 +33,15 @@ div.container{
 		@include span-columns(12 of 12);
 		aside{
 			@include span-columns(3);
+			@include media(max-width $mobile){
+				display: none;
+			}
+		}
+		article{
 			@include span-columns(9);
+			@include media(max-width $mobile){
+	    		@include span-columns(12);
+	    	}
 		}
 	}
 }
@@ -29,5 +54,11 @@ footer{
     }
     article{
     	@include span-columns(9);
+    }
+
+    aside, article {
+    	@include media(max-width $mobile){
+    		@include span-columns(12);
+    	}
     }
 }
