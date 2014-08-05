@@ -1,0 +1,6 @@
+section > aside + article{
+	ul {
+		@extend %default-ul;
+	}
+}
+

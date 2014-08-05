@@ -58,8 +58,12 @@ To speed-up my development flow I discovered today about git hooks, so I writed 
 
 Create a ```.git/hooks/pre-commit``` file.
 
+Run ```chmod u+x .git/hooks/pre-commit``` to set the execution permission.
+
 Paste this content in:
 ```
+#!/bin/sh
+
 #running todo task
 echo "Running Grunt Todo"
 grunt todo
