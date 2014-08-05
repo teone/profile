@@ -2,8 +2,6 @@
 
 angular.module('profileFeApp')
   .controller 'MainCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+    $scope.activateSideNavEl = (el) ->
+    	console.log(el)
+    	$scope.activeSideEl = el

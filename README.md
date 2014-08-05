@@ -93,4 +93,5 @@ and then just commit!
 
 ## frontend/app/views/main.html
 
--  **TODO** `(line 8)`  Highlight element on scroll -->
+-  **TODO** `(line 7)`  Fix sideNav positioning -->
+-  **TODO** `(line 8)`  Scroll to content on click -->

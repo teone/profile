@@ -1,17 +1,16 @@
 <section>
     <aside>
         <ul>
-        	<li>Short Bio</li>
-        	<li>Languages</li>
-        	<li>Skills</li>
-        	<li>Projects</li>
-        	<!-- TODO Highlight element on scroll -->
+        	<li ng-class="{active: activeSideEl === 'bio'}">Short Bio</li>
+        	<li ng-class="{active: activeSideEl === 'lang'}">Languages</li>
+        	<li ng-class="{active: activeSideEl === 'prj'}">Projects</li>
+        	<!-- TODO Fix sideNav positioning -->
         </ul>
     </aside>
     <article>
     	<section>
     		<header>
-    			<h1>Short Bio</h1>
+    			<h1 in-view="activateSideNavEl('bio')">Short Bio</h1>
     		</header>
     		<article>
     			<p>
@@ -45,6 +44,35 @@
 				<p>
 				Ma la mia vita non finisce qui, mi piace lavorare in gruppi dove si effettui un continuo scambio di know-how per aumentare le potenzialità di tutto il team, mentre nel tempo libero adoro praticare sport all'aria aperta come surf, ciclismo, snowboard e arrampicata.
 				</p>
+    		</article>
+    	</section>
+    	<section>
+    		<header>
+    			<h1 in-view="activateSideNavEl('lang')">Languages</h1>
+    		</header>
+    		<article>
+    			<p>This are the code languages I use often:</p>
+    			<div>
+    				<em>Frontend:</em>
+    				<ul>
+    					<li>Html5</li>
+    					<li>AngularJS</li>
+    				</ul>
+    			</div>
+    		</article>
+    	</section>
+    	<section>
+    		<header>
+    			<h1  in-view="activateSideNavEl('prj')">Projects</h1>
+    		</header>
+    		<article>
+    			<p>Some project I have collaborated to:</p>
+    			<div>
+    				<ul>
+    					<li><a href="">Cyclotown</a></li>
+    					<li><a href="">UrbanFile</a></li>
+    				</ul>
+    			</div>
     		</article>
     	</section>
     </article>

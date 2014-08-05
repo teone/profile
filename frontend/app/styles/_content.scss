@@ -31,5 +31,8 @@ section > aside{
 			margin-bottom: 5px;
 			padding: 5px;
 		}
+		>li.active{
+			background: $blue;
+		}
 	}
 }

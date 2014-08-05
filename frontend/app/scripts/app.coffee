@@ -7,7 +7,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'angular-inview'
 ])
 .config ($routeProvider) ->
     $routeProvider
