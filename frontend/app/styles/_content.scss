@@ -1,6 +1,35 @@
+/* ===================================== MAIN CONTENT ======================================*/
 section > aside + article{
 	ul {
 		@extend %default-ul;
 	}
+
+	section {
+		>header + article{
+			p:first-child{
+				font-size: 1.5em;
+				color: $medium-gray;
+				font-style: italic;
+			}
+
+			div > em {
+				font-weight: bold;
+			}
+		}
+	}
 }
 
+/* ===================================== SIDEBAR ======================================*/
+section > aside{
+	>ul{
+		>li{
+			@include border-top-radius(5px);
+			@include border-bottom-radius(5px);
+			@include border-left-radius(5px);
+			@include border-right-radius(5px);
+			border: 1px solid $blue;
+			margin-bottom: 5px;
+			padding: 5px;
+		}
+	}
+}
