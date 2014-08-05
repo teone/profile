@@ -7,7 +7,8 @@ module.exports = function(grunt) {
             },
             src: [
                'frontend/app/scripts/*',
-               'frontend/app/views/*'
+               'frontend/app/views/*',
+               'frontend/app/styles/*'
             ],
         },
     });
